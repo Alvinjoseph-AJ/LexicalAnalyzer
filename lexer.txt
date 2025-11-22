@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+typedef struct {
+    char lexeme[20];
+    int type;
+} Token;
+
+int main() {
+    int x = 0;
+    Token t;
+
+    printf("Hello world\n");   
+    printf("Missing semicolon"); 
+
+    if(x==1)
+    {
+        printf("Inside if block");
+        int y = 5;
+    }
+    else
+    {
+        printf("Inside else block"); 
+        int z = 10;
+    }
+    // Enum block should be skipped
+    enum Colors {
+        RED,
+        GREEN,
+        BLUE
+    };
+
+    int a = 100;
+
+    // Macro continuation line should be skipped
+    printf("This is a macro line")
+    printf("Continuation") 
+
+    return 0;
+}
